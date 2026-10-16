@@ -1,42 +1,73 @@
-Terminal Speed Typing Test
-A clean, lightweight, and interactive terminal-based speed typing test written in Python using the curses library. Test your typing speed in real-time with color-coded feedback for correct and incorrect characters!
 
-Features
-Real-time WPM Calculation: Computes your Words Per Minute dynamically as you type.
+# Terminal Speed Typing Test ⌨️
 
-Instant Visual Feedback: Correctly typed characters appear in green, while errors are highlighted in red.
+A clean, lightweight, and interactive terminal-based speed typing test built in Python using the `curses` library. Test your typing speed in real time with dynamic WPM tracking and instant color-coded text feedback!
 
-Non-blocking Input: Smooth, responsive typing loop utilizing curses nodelay mode.
+---
 
-Cross-platform Support: Works seamlessly on Linux, macOS, and Windows.
+## 🌟 Features
 
-Prerequisites & Installation
-Make sure you have Python installed on your system.
+- **Real-Time WPM Metrics:** Calculates your Words Per Minute dynamically as you type.
+- **Visual Feedback:** 
+  - 🟩 **Green text:** Correctly typed characters.
+  - 🟥 **Red text:** Mistakes/typos.
+- **Cross-Platform Compatibility:** Runs on Linux, macOS, and Windows.
+- **Smooth Performance:** Uses non-blocking keyboard input (`nodelay`) for responsive typing.
 
-1. Clone or Download the Script
-Save the Python script to your local machine (e.g., as typing_test.py).
+---
 
-2. Install Dependencies (Windows Only)
-The standard Python library includes curses on Unix/Linux and macOS. If you are running Windows, you will need the windows-curses package to make it work:
+## 🚀 Getting Started
 
-Bash
-pip install windows-curses
-How to Run
-Open your terminal or command prompt, navigate to the directory where your script is saved, and run:
+### Prerequisites
 
-Bash
-python typing_test.py
-Press any key on the welcome screen to begin.
+- Python 3.x installed on your computer.
 
-Type the target sentence: "The quick brown fox jumps over the lazy dog".
+### Installation
 
-Press the Esc key at any time to quit early.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/terminal-speed-typing-test.git
+   cd terminal-speed-typing-test
+   ```
 
-Once completed, your final WPM will be displayed, and you can press any key to exit.
+2. **Windows Users Only:**
+   The standard `curses` module comes pre-installed on Linux and macOS. If you are on Windows, install `windows-curses`:
+   ```bash
+   pip install windows-curses
+   ```
 
-Future Improvements
-Accuracy Tracking: Display a percentage score tracking correct vs. incorrect keystrokes.
+---
 
-Dynamic Sentence Generation: Pull from a randomized pool of sentences or paragraphs.
+## 🎮 How to Play
 
-Restart Menu: Give options to restart or quit upon completion instead of closing automatically.
+1. Run the script:
+   ```bash
+   python typing_test.py
+   ```
+2. Press **any key** on the start screen to begin the test.
+3. Type out the prompt sentence as accurately and quickly as you can.
+4. Use **Backspace** to fix mistakes, or press **ESC** at any time to exit.
+5. Once complete, view your final WPM score and press any key to close!
+
+---
+
+## 🛠️ Code Overview
+
+- `Startscreen()`: Displays the welcome interface and waits for user input.
+- `display_text()`: Handles line rendering and color-coded character comparisons on screen.
+- `wpm_test()`: Manages the core game loop, input detection, and time-elapsed WPM calculations.
+
+---
+
+## 📌 Future Enhancements
+
+- [ ] Add accuracy percentage tracking (%)
+- [ ] Support random sentences or custom text files
+- [ ] Add a replay/restart option at the end screen
+- [ ] Save high scores locally
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
